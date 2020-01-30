@@ -23,7 +23,7 @@ body {
     box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
     position: relative;
     overflow: hidden;
-    min-height: 120px;
+    min-height: 145px;
 }
 .quote-card p {
     font-size: 22px;
@@ -55,7 +55,7 @@ body {
     bottom: -110px;
     line-height: 100px;
     right: -32px;
-    font-size: 25em;
+    font-size: 17.5em;
     color: rgba(238, 238, 238, 0.8);
     font-weight: normal;
 }

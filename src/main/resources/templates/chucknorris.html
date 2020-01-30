@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Joke From Norris</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="css/chucknorris.css" rel="stylesheet"/>
 
 </head>
@@ -13,20 +14,33 @@
     <div class="row">
         <div class="container" id="quote-wrap">
             <blockquote class="quote-card">
-                <p th:text="${joke}">
+                <button class="btn btn-outline-secondary" style="float:right;" onclick="getQuote()">
+                    <i class="fa fa-repeat"></i>&ensp;New One
+                </button>
+                <p th:text="${joke}" id="quote">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et magna sed libero placerat
-                    euismod. </p>
+                    euismod.
+                </p>
 
-                <cite>
-                    --Chuck Norris
-                </cite>
+                <cite>--Chuck Norris</cite>
             </blockquote>
         </div>
     </div>
 </div>
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getQuote() {
+        $.ajax({
+            type : "GET",
+            url : "/getQuote",
+            success: function(data){
+                $("#quote").text(data);
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
