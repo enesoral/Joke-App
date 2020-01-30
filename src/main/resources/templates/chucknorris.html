@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Joke From Norris</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/chucknorris.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="container" id="quote-wrap">
+            <blockquote class="quote-card">
+                <p th:text="${joke}">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et magna sed libero placerat
+                    euismod. </p>
+
+                <cite>
+                    --Chuck Norris
+                </cite>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</body>
+</html>
